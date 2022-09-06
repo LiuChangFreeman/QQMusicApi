@@ -3,7 +3,7 @@ module.exports = {
   '/': async ({req, res, request, cache}) => {
     let {
       pageNo = 1,
-      pageSize = 20,
+      pageSize = 30,
       key,
       t = 0, // 0：单曲，2：歌单，7：歌词，8：专辑，9：歌手，12：mv
       raw,
