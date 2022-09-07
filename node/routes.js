@@ -2,7 +2,7 @@ module.exports = {
   album: require('../routes/album'),
   comment: require('../routes/comment'),
   feedback: require('../routes/feedback'),
-  lyric: require('../routes/lyric'),
+  lyrics: require('../routes/lyrics'),
   mv: require('../routes/mv'),
   new: require('../routes/new'),
   radio: require('../routes/radio'),
