@@ -34,6 +34,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 config.useDataStatistics && app.use((req, res, next) => dataHandle.record(req, res, next));
 
+app.all("*",function(req,res,next){
+    res.header('Access-Control-Allow-Origin','*');
+    res.header('Access-Control-Allow-Headers','content-type');
+    res.header('Access-Control-Allow-Methods','DELETE,PUT,POST,GET,OPTIONS');
+    if(req.method.toLowerCase() == 'options')
+        res.send(200);
+    else
+        next();
+})
+
 const corsMap = {
   '/user/setCookie': true,
 }
